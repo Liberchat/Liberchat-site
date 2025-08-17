@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feuille de Route - Liberchat</title>
+    <link rel="icon" type="image/png" href="assets/icon.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-content">
+            <div class="logo">
+                <img src="assets/icon.png" alt="Liberchat Logo" class="logo-img">
+                <span>Liberchat</span>
+            </div>
+            <button class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links">
+                <li><a href="./">Accueil</a></li>
+                <li><a href="./roadmap.html" class="active">Feuille de route</a></li>
+                <li><a href="releases.html">Android</a></li>
+                <li><a href="releases-linux.html">Linux</a></li>
+                <li><a href="releases-windows.html">Windows</a></li>
+                <li><a href="releases-macos.html">MacOS</a></li>
+                <li><a href="installation-apk.html">Installation mobile</a></li>
+                <li><a href="autohebergement.html">Auto-hébergement</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main style="padding-top: 80px;">
+        <div class="page-header">
+            <h1><i class="fas fa-route"></i> Feuille de Route</h1>
+            <p>Découvrez l'évolution de Liberchat</p>
+        </div>
+
+        <section class="roadmap-overview">
+            <h2><i class="fas fa-map"></i> Vue d'ensemble</h2>
+            <div class="overview-grid">
+                <div class="overview-card completed">
+                    <i class="fas fa-check-circle"></i>
+                    <h3>Phase 1 - Fondations</h3>
+                    <p>Applications de base et chiffrement</p>
+                    <span class="phase-status">Terminé</span>
+                </div>
+                <div class="overview-card completed">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>Phase 2 - Mobile</h3>
+                    <p>PWA et applications natives</p>
+                    <span class="phase-status">Terminé</span>
+                </div>
+                <div class="overview-card in-progress">
+                    <i class="fas fa-cogs"></i>
+                    <h3>Phase 3 - Avancé</h3>
+                    <p>Fonctionnalités Plus </p>
+                    <span class="phase-status">En cours</span>
+                </div>
+                <div class="overview-card planned">
+                    <i class="fas fa-rocket"></i>
+                    <h3>Phase 4 - Expansion</h3>
+                    <p>Écosystème complet</p>
+                    <span class="phase-status">Planifié</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="detailed-roadmap">
+            <h2><i class="fas fa-timeline"></i> Roadmap Détaillée</h2>
+            
+            <div class="timeline">
+                <div class="timeline-item completed">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div class="timeline-date">Q1 2024</div>
+                            <div class="version-tag">v3.0</div>
+                        </div>
+                        <h4>Version 3.0 - Lancement initial</h4>
+                        <ul>
+                            <li>Application desktop pour Windows et Linux</li>
+                            <li>Application Android</li>
+                            <li>Chiffrement de bout en bout</li>
+                            <li>Interface utilisateur moderne</li>
+                        </ul>
+                        <div class="status completed">✓ Terminé</div>
+                    </div>
+                </div>
+
+                <div class="timeline-item completed">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div class="timeline-date">Q2 2024</div>
+                            <div class="version-tag">v3.1</div>
+                        </div>
+                        <h4>Version 3.1 - Amélioration de la stabilité</h4>
+                        <ul>
+                            <li>Optimisation des performances</li>
+                            <li>Correction de bugs</li>
+                            <li>Amélioration de la synchronisation</li>
+                            <li>Ajout PWA iOS/Android</li>
+                            <li>Nouvelle version Android 2.5</li>
+                            <li>Messages vocaux</li>
+                        </ul>
+                        <div class="status completed">✓ Terminé</div>
+                    </div>
+                </div>
+
+                <div class="timeline-item completed">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div class="timeline-date">Q3 2024</div>
+                            <div class="version-tag">v3.2</div>
+                        </div>
+                        <h4>Version 3.2 - Nouvelles fonctionnalités</h4>
+                        <ul>
+                            <li>Nouveaux clients Linux et Windows</li>
+                            <li>Docker auto-hébergement en développement</li>
+                            <li>Auto-hébergement script débutant</li>
+                            <li>Auto-hébergement Docker</li>
+                            <li>Auto-hébergement YunoHost</li>
+                            <li>Mode accessibilité</li>
+                        </ul>
+                        <div class="status completed">✓ Terminé</div>
+                    </div>
+                </div>
+
+                <div class="timeline-item planned">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div class="timeline-date">Q2 2025</div>
+                            <div class="version-tag">v3.3</div>
+                        </div>
+                        <h4>Version 3.3 - Extension de la plateforme</h4>
+                        <ul>
+                            <li>API publique</li>
+                            <li>SDK pour développeurs</li>
+                        </ul>
+                        <div class="status planned">📅 Planifié</div>
+                    </div>
+                </div>
+
+                <div class="timeline-item planned">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div class="timeline-date">Q3 2025</div>
+                            <div class="version-tag">v4.0</div>
+                        </div>
+                        <h4>Version 4.0 - Expansion iOS & macOS</h4>
+                        <ul>
+                            <li>Application native macOS</li>
+                            <li>Application native iOS</li>
+                            <li>Synchronisation entre appareils Apple</li>
+                            <li>Fonctionnalités spécifiques à Apple</li>
+                        </ul>
+                        <div class="status planned">📅 Planifié</div>
+                    </div>
+                </div>
+            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="technical-specs">
+            <h2><i class="fas fa-cogs"></i> Spécifications Techniques</h2>
+            <div class="specs-grid">
+                <div class="spec-card">
+                    <h3><i class="fas fa-code"></i> Technologies</h3>
+                    <ul>
+                        <li><strong>Frontend:</strong> Electron, React, TypeScript</li>
+                        <li><strong>Mobile:</strong> React Native, Flutter</li>
+                        <li><strong>Backend:</strong> Socket Io</li>
+                        <li><strong>Chiffrement:</strong> libsignal, OpenSSL</li>
+                    </ul>
+                </div>
+                <div class="spec-card">
+                    <h3><i class="fas fa-server"></i> Infrastructure</h3>
+                    <ul>
+                        <li><strong>Conteneurs:</strong>  Docker</li>
+                        <li><strong>Stockage:</strong> MinIO, IPFS</li>
+                        <li><strong>Monitoring:</strong>Uptime kuma</li>
+                        <li><strong>CI/CD:</strong> GitHub Actions</li>
+                    </ul>
+                </div>
+                <div class="spec-card">
+                    <h3><i class="fas fa-shield-alt"></i> Sécurité</h3>
+                    <ul>
+                        <li><strong>Chiffrement:</strong> AES-256, ChaCha20</li>
+                        <li><strong>Signatures:</strong> Ed25519, ECDSA</li>
+                        <li><strong>Hachage:</strong> SHA-3, BLAKE3</li>
+                        <li><strong>Échange de clés:</strong> X25519, ECDH</li>
+                        <li><strong>Authentification:</strong> TOTP, FIDO2</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+
+
+        
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Liberchat</h4>
+                <p>Communication libre et sécurisée pour tous.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Liens</h4>
+                <ul>
+                    <li><a href="https://github.com/AnARCHIS12/Liberchat-3.0">GitHub</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="privacy.html">Mentions légales</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="https://discord.gg/nQDz6g8nYZ">Discord</a></li>
+                    <li><a href="releases.html">Téléchargements</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span class="current-year"></span> Liberchat - Logiciel Libre</p>
+        </div>
+    </footer>
+
+    <style>
+        .page-header {
+            text-align: center;
+            padding: 3rem 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .page-header h1 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .page-header p {
+            color: var(--text-muted);
+            font-size: 1.2rem;
+        }
+
+
+        .roadmap-overview {
+            padding: 4rem 2rem;
+            background: var(--section-background);
+        }
+
+        .overview-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 2rem auto 0;
+        }
+
+        .overview-card {
+            background: var(--card-background);
+            border: 1px solid var(--card-border);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .overview-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-primary);
+        }
+
+        .overview-card i {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .overview-card.completed i { color: #28a745; }
+        .overview-card.in-progress i { color: #ffc107; }
+        .overview-card.planned i { color: #6c757d; }
+
+        .phase-status {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-top: 1rem;
+        }
+
+        .overview-card.completed .phase-status {
+            background: rgba(40, 167, 69, 0.1);
+            color: #28a745;
+        }
+
+        .overview-card.in-progress .phase-status {
+            background: rgba(255, 193, 7, 0.1);
+            color: #ffc107;
+        }
+
+        .overview-card.planned .phase-status {
+            background: rgba(108, 117, 125, 0.1);
+            color: #6c757d;
+        }
+
+        .detailed-roadmap {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .year-section {
+            margin-bottom: 4rem;
+        }
+
+        .year-title {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .year-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: var(--accent-color);
+            border-radius: 2px;
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 20px;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(to bottom, var(--primary-color), var(--accent-color));
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 4rem;
+            padding-left: 3rem;
+        }
+
+        .timeline-marker {
+            position: absolute;
+            left: -28px;
+            top: 0;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            border: 3px solid var(--primary-color);
+            background: var(--background-color);
+        }
+
+        .timeline-item.completed .timeline-marker {
+            background: var(--primary-color);
+        }
+
+        .timeline-item.in-progress .timeline-marker {
+            background: #ffc107;
+            border-color: #ffc107;
+        }
+
+        .timeline-content {
+            background: var(--card-background);
+            border: 1px solid var(--card-border);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            box-shadow: var(--shadow-card);
+        }
+
+        .timeline-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .timeline-date {
+            color: var(--accent-color);
+            font-weight: 600;
+        }
+
+        .version-tag {
+            background: var(--primary-color);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .timeline-content h4 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+        }
+
+        .timeline-content ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 1.5rem;
+        }
+
+        .timeline-content li {
+            padding: 0.3rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            color: var(--text-muted);
+        }
+
+        .timeline-content li::before {
+            content: '▸';
+            color: var(--primary-color);
+            position: absolute;
+            left: 0;
+        }
+
+        .status {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .status.completed {
+            background: rgba(40, 167, 69, 0.1);
+            color: #28a745;
+        }
+
+        .status.in-progress {
+            background: rgba(255, 193, 7, 0.1);
+            color: #ffc107;
+        }
+
+        .status.planned {
+            background: rgba(108, 117, 125, 0.1);
+            color: #6c757d;
+        }
+
+        .technical-specs {
+            padding: 4rem 2rem;
+            background: var(--section-background);
+        }
+
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 2rem auto 0;
+        }
+
+        .spec-card {
+            background: var(--card-background);
+            border: 1px solid var(--card-border);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+        }
+
+        .spec-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .spec-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .spec-card li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--card-border);
+        }
+
+        .spec-card li:last-child {
+            border-bottom: none;
+        }
+
+
+
+        .funding {
+            padding: 4rem 2rem;
+            background: var(--section-background);
+        }
+
+        .funding-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 2rem auto 0;
+        }
+
+        .funding-methods {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .funding-method {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.8rem;
+            background: var(--card-background);
+            border-radius: var(--border-radius);
+            border: 1px solid var(--card-border);
+        }
+
+        .funding-method i {
+            color: var(--primary-color);
+        }
+
+        .goal-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .goal-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: var(--card-border);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .progress {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            transition: width 0.3s ease;
+        }
+
+        @media (max-width: 768px) {
+            .overview-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .feature-list {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+
+            .funding-content {
+                grid-template-columns: 1fr;
+            }
+
+            .funding-methods {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
+    <script src="script.js"></script>
+</body>
+</html>

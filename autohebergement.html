@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto-hébergement YunoHost - Liberchat</title>
+    <link rel="icon" type="image/png" href="assets/icon.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+
+        .page-content {
+            padding-top: 80px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        .info-card {
+            background: var(--card-background);
+            padding: 3rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            text-align: center;
+            border: 1px solid rgba(255, 40, 0, 0.2);
+        }
+        
+        .info-card h2 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        .github-link {
+            margin-top: 2rem;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        .installation-steps {
+            margin: 4rem 0;
+        }
+        .installation-steps h2 {
+            text-align: center;
+            color: var(--primary-color);
+            margin-bottom: 3rem;
+            font-size: 2.2rem;
+        }
+        .step {
+            display: flex;
+            align-items: flex-start;
+            gap: 2rem;
+            margin: 2rem 0;
+            padding: 2rem;
+            background: var(--card-background);
+            border-radius: 10px;
+            border-left: 4px solid var(--primary-color);
+        }
+        .step-number {
+            background: var(--primary-color);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+        .step-content h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        @media (max-width: 768px) {
+            .hero-small {
+                padding: 2rem 1rem;
+            }
+            .container {
+                padding: 0 1rem;
+            }
+            .info-card {
+                padding: 2rem;
+                margin: 2rem 0;
+            }
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            .step {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-content">
+            <div class="logo">
+                <img src="assets/icon.png" alt="Liberchat Logo" class="logo-img">
+                <span>Liberchat</span>
+            </div>
+            <button class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links">
+                <li><a href="./">Accueil</a></li>
+                <li><a href="./roadmap.html">Feuille de route</a></li>
+                <li><a href="releases.html">Android</a></li>
+                <li><a href="releases-linux.html">Linux</a></li>
+                <li><a href="releases-windows.html">Windows</a></li>
+                <li><a href="releases-macos.html">MacOS</a></li>
+                <li><a href="installation-apk.html">Installation mobile</a></li>
+                <li><a href="autohebergement.html" class="active">Auto-hébergement</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="page-content">
+
+
+        <section class="content-section">
+            <div class="container">
+                <div class="info-card">
+                    <h2><i class="fab fa-github"></i> Serveur YunoHost Liberchat</h2>
+                    <p>Déployez facilement votre propre instance Liberchat sur YunoHost pour une communication totalement décentralisée et sous votre contrôle.</p>
+                    
+                    <div class="github-link">
+                        <a href="https://github.com/Liberchat/liberchatserver_ynh" target="_blank" rel="noopener noreferrer" class="cta-primary">
+                            <i class="fab fa-github"></i> Voir sur GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Contrôle total</h3>
+                        <p>Votre serveur, vos données, vos règles</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-cogs"></i>
+                        <h3>Installation simple</h3>
+                        <p>Déploiement en quelques clics avec YunoHost</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-users"></i>
+                        <h3>Multi-utilisateurs</h3>
+                        <p>Créez votre propre communauté privée</p>
+                    </div>
+                </div>
+
+                <div class="installation-steps">
+                    <h2><i class="fas fa-list-ol"></i> Installation</h2>
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Prérequis</h3>
+                            <p>Disposer d'un serveur YunoHost fonctionnel avec accès administrateur</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Installation via l'interface web</h3>
+                            <p>Accédez à votre interface d'administration YunoHost → Applications → Installer une application → Saisissez l'URL du dépôt GitHub</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Configuration</h3>
+                            <p>Définissez le domaine, le chemin d'accès et les paramètres de sécurité selon vos besoins</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Liberchat</h4>
+                <p>Communication libre et sécurisée pour tous.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Liens</h4>
+                <ul>
+                    <li><a href="https://github.com/AnARCHIS12/Liberchat-3.0">GitHub</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="privacy.html">Mentions légales</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span class="current-year"></span> Liberchat - Logiciel Libre</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

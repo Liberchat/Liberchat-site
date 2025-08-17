@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Releases Windows Liberchat</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .releases-main-container {
+            max-width: 1000px;
+            margin: 140px auto 0 auto;
+            background: var(--card-background);
+            border: 1px solid var(--card-border);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-primary);
+            padding: 4rem 3rem;
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            box-sizing: border-box;
+            backdrop-filter: blur(20px);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .releases-main-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--primary-color), var(--accent-color), transparent);
+        }
+        .releases-header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+        .releases-header h1 {
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 3.2rem;
+            margin-bottom: 1rem;
+            letter-spacing: -1px;
+            font-weight: 700;
+            text-shadow: 0 0 30px rgba(255, 40, 0, 0.3);
+        }
+        .releases-header p {
+            font-size: 1.4rem;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+        }
+        .releases-list {
+            list-style: none;
+            padding: 0;
+        }
+        .releases-list li {
+            background: var(--card-background);
+            border: 1px solid var(--card-border);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-card);
+            margin-bottom: 2rem;
+            padding: 2rem 1.8rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            font-size: 1.3rem;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+        }
+        
+        .releases-list li::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+            opacity: 0;
+            transition: var(--transition);
+        }
+        
+        .releases-list li:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: var(--shadow-primary);
+            border-color: var(--primary-color);
+        }
+        
+        .releases-list li:hover::before {
+            opacity: 1;
+        }
+        .releases-list a {
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.8rem 1.5rem;
+            border: 2px solid var(--primary-color);
+            border-radius: var(--border-radius-small);
+            background-color: rgba(255, 40, 0, 0.05);
+            margin-top: 0.5rem;
+        }
+        
+        .releases-list a::after {
+            content: '↓';
+            font-size: 1.1rem;
+            transition: var(--transition);
+        }
+        .releases-list a:hover {
+            transform: translateY(-2px) scale(1.02);
+            box-shadow: 0 8px 25px rgba(255, 40, 0, 0.3);
+            background-color: rgba(255, 40, 0, 0.1);
+            border-color: var(--primary-light);
+        }
+        
+        .releases-list a:hover::after {
+            transform: translateY(2px);
+        }
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            margin: 3rem auto 0 auto;
+            padding: 1rem 2rem;
+            background: rgba(255, 40, 0, 0.05);
+            border: 2px solid var(--primary-color);
+            border-radius: var(--border-radius);
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: var(--transition);
+            backdrop-filter: blur(10px);
+        }
+        
+        .back-link::before {
+            content: '←';
+            font-size: 1.2rem;
+            transition: var(--transition);
+        }
+        
+        .back-link:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: var(--shadow-primary);
+            background: rgba(255, 40, 0, 0.1);
+            border-color: var(--primary-light);
+        }
+        
+        .back-link:hover::before {
+            transform: translateX(-3px);
+        }
+        .doc-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            margin: 0 auto 3rem auto;
+            padding: 1rem 2rem;
+            background: #ffffff;
+            color: #000000;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            border-radius: var(--border-radius);
+            transition: var(--transition);
+            box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
+        }
+        
+        .doc-link::after {
+            content: '↗';
+            font-size: 1.2rem;
+            transition: var(--transition);
+        }
+        
+        .doc-link:hover {
+            background: rgba(255, 255, 255, 0.9);
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 12px 35px rgba(255, 255, 255, 0.3);
+        }
+        
+        .doc-link:hover::after {
+            transform: translate(2px, -2px);
+        }
+        .nav-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 0;
+        }
+        .nav-links {
+            display: flex;
+            flex-wrap: nowrap;
+            gap: 0.7em 1.2em;
+            justify-content: flex-end;
+            align-items: center;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        @media screen and (max-width: 1100px) {
+            .nav-links {
+                flex-wrap: wrap;
+            }
+        }
+        @media screen and (max-width: 900px) {
+            .nav-links {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5em;
+                flex-wrap: nowrap;
+            }
+        }
+        @media screen and (max-width: 600px) {
+            .releases-main-container {
+                max-width: 100vw;
+                margin: 80px 0 0 0;
+                padding: 0.7em 0.1em 1em 0.1em;
+            }
+            .releases-header h1 {
+                font-size: 1.25em;
+            }
+            .releases-list li {
+                padding: 1em 0.1em;
+                font-size: 1.05em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-content">
+            <div class="logo">
+                <img src="assets/icon.png" alt="Liberchat Logo" class="logo-img">
+                <span>Liberchat</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="./">Accueil</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="releases-main-container">
+        <div class="releases-header">
+            <h1>Versions Windows de Liberchat</h1>
+            <p>Téléchargez les différentes versions desktop pour Windows</p>
+        </div>
+        <a href="https://github.com/Liberchat/Liberchat-win10-11" class="doc-link" target="_blank">Voir la documentation et le projet sur GitHub</a>
+        <ul class="releases-list">
+            
+            <li>
+                <span><strong>v2.0.1 (Windows 10/11)</strong></span>
+                <a href="https://github.com/Liberchat/Liberchat-win10-11/releases/download/2.0.1/Liberchat-Setup-2.0.1.exe" target="_blank">Télécharger l'installateur v2.0.1</a>
+            </li>
+            <li>
+                <span><strong>v2.0.0 (Windows 10/11)</strong></span>
+                <a href="https://github.com/Liberchat/Liberchat-win10-11/releases/download/2.0/Liberchat-Setup-2.0.0.exe" target="_blank">Télécharger l'installateur v2.0.0</a>
+            </li>
+            <li>
+                <span><strong>v1.1.0 (Windows)</strong></span>
+                <a href="https://github.com/AnARCHIS12/Liberchat-3.0/releases/download/v1.1.0/Liberchat.Setup.1.0.0.exe" target="_blank">Télécharger l'installateur v1.1.0</a>
+            </li>
+        </ul>
+        <a href="index.html" class="back-link">Retour à l'accueil</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Liberchat</title>
+    <link rel="icon" type="image/png" href="assets/icon.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-content">
+            <div class="logo">
+                <img src="assets/icon.png" alt="Liberchat Logo" class="logo-img">
+                <span>Liberchat</span>
+            </div>
+            <button class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links">
+                <li><a href="./">Accueil</a></li>
+                <li><a href="./roadmap.html">Feuille de route</a></li>
+                <li><a href="releases.html">Android</a></li>
+                <li><a href="releases-linux.html">Linux</a></li>
+                <li><a href="releases-windows.html">Windows</a></li>
+                <li><a href="releases-macos.html">MacOS</a></li>
+                <li><a href="installation-apk.html">Installation mobile</a></li>
+                <li><a href="autohebergement.html">Auto-hébergement</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main style="padding-top: 80px;">
+        <div class="page-header">
+            <h1><i class="fas fa-question-circle"></i> Questions Fréquentes</h1>
+            <p>Trouvez rapidement les réponses à vos questions</p>
+        </div>
+
+        <section class="faq-content">
+            <div class="faq-categories">
+                <div class="category-nav">
+                    <button class="category-btn active" data-category="general">
+                        <i class="fas fa-info-circle"></i> Général
+                    </button>
+                    <button class="category-btn" data-category="installation">
+                        <i class="fas fa-download"></i> Installation
+                    </button>
+                    <button class="category-btn" data-category="security">
+                        <i class="fas fa-shield-alt"></i> Sécurité
+                    </button>
+                    <button class="category-btn" data-category="technical">
+                        <i class="fas fa-cogs"></i> Technique
+                    </button>
+                </div>
+            </div>
+
+            <div class="faq-sections">
+                <div class="faq-section active" id="general">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Qu'est-ce que Liberchat ?</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Liberchat est une application de messagerie libre, gratuite et sécurisée. Elle utilise un chiffrement de bout en bout pour protéger vos conversations et ne collecte aucune donnée personnelle.</p>
+                            <p>Le projet est entièrement open source, ce qui signifie que le code est transparent et auditable par tous.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Sur quelles plateformes Liberchat est-il disponible ?</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Liberchat est disponible sur :</p>
+                            <ul>
+                                <li><strong>Windows</strong> - Version 2.0.1</li>
+                                <li><strong>Linux</strong> - AppImage universelle</li>
+                                <li><strong>macOS</strong> - Compatible Intel et Apple Silicon</li>
+                                <li><strong>Android</strong> - APK et PWA</li>
+                                <li><strong>iOS</strong> - PWA (application native en développement)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Liberchat est-il vraiment gratuit ?</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Oui, Liberchat est totalement gratuit et le restera toujours. Il n'y a :</p>
+                            <ul>
+                                <li>Aucun abonnement payant</li>
+                                <li>Aucune publicité</li>
+                                <li>Aucune vente de données</li>
+                                <li>Aucune fonctionnalité premium</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Comment puis-je contribuer au projet ?</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Il existe plusieurs façons de contribuer :</p>
+                            <ul>
+                                <li><strong>Code</strong> - Contribuez sur <a href="https://github.com/AnARCHIS12/Liberchat-3.0">GitHub</a></li>
+                                <li><strong>Traduction</strong> - Aidez à traduire l'interface</li>
+                                <li><strong>Tests</strong> - Signalez des bugs et testez les nouvelles versions</li>
+                                <li><strong>Documentation</strong> - Améliorez la documentation</li>
+                                <li><strong>Communauté</strong> - Aidez d'autres utilisateurs sur <a href="https://discord.gg/nQDz6g8nYZ">Discord</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-section" id="installation">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Comment installer Liberchat sur Windows ?</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Pour Windows :</p>
+                            <ol>
+                                <li>Téléchargez le fichier .exe depuis la page d'accueil</li>
+                                <li>Exécutez le fichier d'installation</li>
+                                <li>Suivez les instructions de l'assistant d'installation</li>
+                                <li>Lancez Liberchat depuis le menu Démarrer</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Comment installer l'APK Android ?</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Installation de l'APK :</p>
+                            <ol>
+                                <li>Activez "Sources inconnues" dans Paramètres → Sécurité</li>
+                                <li>Téléchargez le fichier APK</li>
+                                <li>Ouvrez le fichier téléchargé</li>
+                                <li>Confirmez l'installation</li>
+                            </ol>
+                            <p>Vous pouvez aussi utiliser la PWA directement depuis votre navigateur.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="fas fa-chevron-right"></i>
+                            <span>L'AppImage Linux ne se lance pas</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Si l'AppImage ne fonctionne pas :</p>
+                            <ol>
+                                <li>Rendez le fichier exécutable : <code>chmod +x Liberchat-*.AppImage</code></li>
+                                <li>Installez FUSE si nécessaire : <code>sudo apt install fuse</code></li>
+                                <li>Lancez depuis le terminal pour voir les erreurs</li>
+                                <li>Vérifiez que votre distribution est supportée</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Comment auto-héberger Liberchat ?</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Plusieurs options d'auto-hébergement :</p>
+                            <ul>
+                                <li><strong>Docker</strong> - Solution recommandée avec docker-compose</li>
+                                <li><strong>YunoHost</strong> - Installation en un clic</li>
+                                <li><strong>Script manuel</strong> - Pour les utilisateurs avancés</li>
+                            </ul>
+                            <p>Consultez la <a href="autohebergement.html">page d'auto-hébergement</a> pour plus de détails.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-section" id="security">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Comment fonctionne le chiffrement de bout en bout ?</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Liberchat utilise le protocole Signal pour le chiffrement :</p>
+                            <ul>
+                                <li><strong>Chiffrement local</strong> - Messages chiffrés avant envoi</li>
+                                <li><strong>Clés uniques</strong> - Chaque conversation a ses propres clés</li>
+                                <li><strong>Perfect Forward Secrecy</strong> - Les anciennes clés sont supprimées</li>
+                                <li><strong>Vérification</strong> - Possibilité de vérifier l'identité des contacts</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Quelles données Liberchat collecte-t-il ?</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p><strong>Aucune donnée personnelle n'est collectée.</strong></p>
+                            <p>Liberchat ne stocke pas :</p>
+                            <ul>
+                                <li>Vos messages (chiffrés localement)</li>
+                                <li>Vos contacts</li>
+                                <li>Vos métadonnées de communication</li>
+                                <li>Votre adresse IP</li>
+                                <li>Vos habitudes d'utilisation</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Le code source est-il auditable ?</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Oui, Liberchat est entièrement open source :</p>
+                            <ul>
+                                <li><strong>Code public</strong> - Disponible sur GitHub</li>
+                                <li><strong>Audits réguliers</strong> - Par la communauté</li>
+                                <li><strong>Transparence totale</strong> - Aucun code caché</li>
+                                <li><strong>Contributions</strong> - Acceptées de tous</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Liberchat peut-il être censuré ?</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Liberchat est conçu pour résister à la censure :</p>
+                            <ul>
+                                <li><strong>Décentralisé</strong> - Pas de serveur central</li>
+                                <li><strong>P2P</strong> - Communication directe entre utilisateurs</li>
+                                <li><strong>Auto-hébergement</strong> - Contrôlez votre propre serveur</li>
+                                <li><strong>Open source</strong> - Impossible de supprimer le code</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-section" id="technical">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Quelles sont les technologies utilisées ?</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Stack technique de Liberchat :</p>
+                            <ul>
+                                <li><strong>Frontend</strong> - Electron, React, TypeScript</li>
+                                <li><strong>Mobile</strong> - React Native, PWA</li>
+                                <li><strong>Backend</strong> - Node.js, Rust</li>
+                                <li><strong>Chiffrement</strong> - libsignal, OpenSSL</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Configuration système requise</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p><strong>Windows :</strong> Windows 10/11, 4GB RAM, 500MB espace</p>
+                            <p><strong>Linux :</strong> Distribution récente, 4GB RAM, 500MB espace</p>
+                            <p><strong>macOS :</strong> macOS 10.14+, Intel ou Apple Silicon</p>
+                            <p><strong>Android :</strong> Android 5.0+ (API 21), 2GB RAM</p>
+                            <p><strong>iOS :</strong> iOS 12+ pour la PWA</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Comment signaler un bug ?</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Pour signaler un problème :</p>
+                            <ol>
+                                <li>Vérifiez que le bug n'est pas déjà signalé</li>
+                                <li>Ouvrez une issue sur <a href="https://github.com/AnARCHIS12/Liberchat-3.0/issues">GitHub</a></li>
+                                <li>Décrivez le problème en détail</li>
+                                <li>Incluez votre système d'exploitation et version</li>
+                                <li>Ajoutez des captures d'écran si possible</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Fréquence des mises à jour</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Cycle de développement :</p>
+                            <ul>
+                                <li><strong>Versions majeures</strong> - Tous les 6 mois</li>
+                                <li><strong>Versions mineures</strong> - Tous les 2-3 mois</li>
+                                <li><strong>Correctifs</strong> - Selon les besoins</li>
+                                <li><strong>Sécurité</strong> - Immédiatement si nécessaire</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="help-section">
+            <h2><i class="fas fa-life-ring"></i> Besoin d'aide supplémentaire ?</h2>
+            <div class="help-grid">
+                <div class="help-card">
+                    <i class="fab fa-discord"></i>
+                    <h3>Discord</h3>
+                    <p>Rejoignez notre communauté pour obtenir de l'aide en temps réel</p>
+                    <a href="https://discord.gg/nQDz6g8nYZ" class="btn-primary">Rejoindre</a>
+                </div>
+                <div class="help-card">
+                    <i class="fab fa-github"></i>
+                    <h3>GitHub</h3>
+                    <p>Signalez des bugs ou consultez la documentation technique</p>
+                    <a href="https://github.com/AnARCHIS12/Liberchat-3.0" class="btn-primary">Voir le projet</a>
+                </div>
+                <div class="help-card">
+                    <i class="fas fa-book"></i>
+                    <h3>Documentation</h3>
+                    <p>Guides détaillés et tutoriels pour bien commencer</p>
+                    <a href="https://github.com/Liberchat/Liberchat/blob/Liberchat6.1.20/docs/Home.md" class="btn-primary">Consulter</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Liberchat</h4>
+                <p>Communication libre et sécurisée pour tous.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Liens</h4>
+                <ul>
+                    <li><a href="https://github.com/AnARCHIS12/Liberchat-3.0">GitHub</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="privacy.html">Mentions légales</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="https://discord.gg/nQDz6g8nYZ">Discord</a></li>
+                    <li><a href="releases.html">Téléchargements</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span class="current-year"></span> Liberchat - Logiciel Libre</p>
+        </div>
+    </footer>
+
+    <style>
+        .page-header {
+            text-align: center;
+            padding: 3rem 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .page-header h1 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .page-header p {
+            color: var(--text-muted);
+            font-size: 1.2rem;
+        }
+
+        .faq-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem 4rem;
+        }
+
+        .faq-categories {
+            margin-bottom: 3rem;
+        }
+
+        .category-nav {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .category-btn {
+            background: var(--card-background);
+            border: 1px solid var(--card-border);
+            border-radius: var(--border-radius);
+            padding: 1rem 1.5rem;
+            color: var(--text-color);
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .category-btn:hover,
+        .category-btn.active {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .faq-section {
+            display: none;
+        }
+
+        .faq-section.active {
+            display: block;
+        }
+
+        .faq-item {
+            background: var(--card-background);
+            border: 1px solid var(--card-border);
+            border-radius: var(--border-radius);
+            margin-bottom: 1rem;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .faq-item:hover {
+            box-shadow: var(--shadow-card);
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            transition: var(--transition);
+        }
+
+        .faq-question:hover {
+            background: var(--section-background);
+        }
+
+        .faq-question i {
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.open .faq-question i {
+            transform: rotate(90deg);
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem 1.5rem;
+            display: none;
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .faq-item.open .faq-answer {
+            display: block;
+        }
+
+        .faq-answer ul,
+        .faq-answer ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+
+        .faq-answer li {
+            margin-bottom: 0.5rem;
+        }
+
+        .faq-answer code {
+            background: var(--section-background);
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+
+        .faq-answer a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .faq-answer a:hover {
+            text-decoration: underline;
+        }
+
+        .btn-primary {
+            background: var(--primary-color);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            display: inline-block;
+            transition: var(--transition);
+            font-weight: 500;
+        }
+
+        .btn-primary:hover {
+            background: var(--accent-color);
+            transform: translateY(-2px);
+            color: white;
+        }
+
+        .help-section {
+            background: var(--section-background);
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .help-section h2 {
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+        }
+
+        .help-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .help-card {
+            background: var(--card-background);
+            border: 1px solid var(--card-border);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            transition: var(--transition);
+        }
+
+        .help-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-primary);
+        }
+
+        .help-card i {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .help-card h3 {
+            color: var(--text-color);
+            margin-bottom: 1rem;
+        }
+
+        .help-card p {
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .faq-content {
+                padding: 0 1rem 2rem;
+            }
+
+            .category-nav {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .category-btn {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
+
+            .help-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Gestion des catégories
+            const categoryBtns = document.querySelectorAll('.category-btn');
+            const faqSections = document.querySelectorAll('.faq-section');
+
+            categoryBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const category = btn.dataset.category;
+                    
+                    // Mise à jour des boutons
+                    categoryBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    
+                    // Mise à jour des sections
+                    faqSections.forEach(section => {
+                        section.classList.remove('active');
+                        if (section.id === category) {
+                            section.classList.add('active');
+                        }
+                    });
+                });
+            });
+
+            // Gestion des questions FAQ (accordéon)
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', () => {
+                    const faqItem = question.parentElement;
+                    const isOpen = faqItem.classList.contains('open');
+                    
+                    // Fermer toutes les autres questions
+                    document.querySelectorAll('.faq-item').forEach(item => {
+                        item.classList.remove('open');
+                    });
+                    
+                    // Ouvrir/fermer la question cliquée
+                    if (!isOpen) {
+                        faqItem.classList.add('open');
+                    }
+                });
+            });
+
+            // Menu mobile
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
+            
+            if (menuToggle) {
+                menuToggle.addEventListener('click', () => {
+                    navLinks.classList.toggle('active');
+                });
+            }
+
+            // Mise à jour de l'année
+            const yearElements = document.querySelectorAll('.current-year');
+            const currentYear = new Date().getFullYear();
+            yearElements.forEach(el => {
+                el.textContent = currentYear;
+            });
+        });
+    </script>
+</body>
+</html>
