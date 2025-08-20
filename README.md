@@ -24,7 +24,8 @@ Ce repository contient le code source du site web officiel de Liberchat, une app
 - **FAQ** - Questions fréquentes avec système d'accordéon
 - **Mentions légales** - Politique de confidentialité et conformité RGPD
 - **Pages de téléchargement** - Pour chaque plateforme (Windows, Linux, macOS, Android)
-- **Auto-hébergement** - Guide pour héberger son propre serveur
+- **Auto-hébergement** - Guide pour héberger son propre serveur (YunoHost)
+- **Docker** - Test en local et développement rapide
 - **Design responsive** - Compatible mobile et desktop
 
 ## 🛠️ Technologies utilisées
@@ -48,7 +49,8 @@ liberchat/
 ├── releases-windows.html   # Téléchargements Windows
 ├── releases-macos.html     # Téléchargements macOS
 ├── installation-apk.html   # Guide installation mobile
-├── autohebergement.html    # Guide auto-hébergement
+├── autohebergement.html    # Guide auto-hébergement YunoHost
+├── docker.html             # Guide Docker pour développement
 ├── qr.html                 # QR codes pour mobile
 ├── styles.css              # Styles principaux
 ├── script.js               # Scripts JavaScript
@@ -134,6 +136,8 @@ Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus de 
 ## 🔗 Liens utiles
 
 - **Application Liberchat** - [GitHub](https://github.com/AnARCHIS12/Liberchat-3.0)
+- **Auto-hébergement YunoHost** - [GitHub](https://github.com/Liberchat/liberchatserver_ynh)
+- **Docker** - [GitHub](https://github.com/Liberchat/Liberchat-docker)
 - **Discord** - [Rejoindre la communauté](https://discord.gg/nQDz6g8nYZ)
 - **Facebook** - [Groupe Facebook](https://www.facebook.com/groups/1056100956078058)
 - **Téléchargements** - [Releases](https://github.com/Liberchat)
