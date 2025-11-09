@@ -82,22 +82,22 @@ nav {
     left: 0;
     width: 100%;
     z-index: 1000;
-    background: 
+    background:
         linear-gradient(135deg, rgba(0, 0, 0, 0.95) 0%, rgba(10, 0, 0, 0.9) 100%),
         radial-gradient(circle at 20% 50%, rgba(255, 40, 0, 0.1) 0%, transparent 50%);
     backdrop-filter: blur(30px) saturate(180%);
     border-bottom: 1px solid rgba(255, 40, 0, 0.3);
     transition: var(--transition);
-    box-shadow: 
+    box-shadow:
         0 8px 40px rgba(0, 0, 0, 0.4),
         inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
 nav.scrolled {
-    background: 
+    background:
         linear-gradient(135deg, rgba(0, 0, 0, 0.98) 0%, rgba(15, 0, 0, 0.95) 100%),
         radial-gradient(circle at 30% 50%, rgba(255, 40, 0, 0.15) 0%, transparent 60%);
-    box-shadow: 
+    box-shadow:
         0 12px 60px rgba(255, 40, 0, 0.25),
         0 4px 20px rgba(0, 0, 0, 0.5),
         inset 0 1px 0 rgba(255, 255, 255, 0.15);
@@ -123,7 +123,7 @@ nav.scrolled {
     left: 0;
     width: 100%;
     height: 100%;
-    background: 
+    background:
         radial-gradient(circle at 10% 20%, rgba(255, 40, 0, 0.05) 0%, transparent 50%),
         radial-gradient(circle at 90% 80%, rgba(255, 215, 0, 0.03) 0%, transparent 50%);
     pointer-events: none;
@@ -229,13 +229,13 @@ nav.scrolled .nav-content {
     margin: 0;
     padding: 0;
     list-style: none;
-    background: 
+    background:
         linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 40, 0, 0.05) 100%);
     border-radius: 60px;
     padding: 0.8rem;
     backdrop-filter: blur(15px) saturate(150%);
     border: 1px solid rgba(255, 40, 0, 0.2);
-    box-shadow: 
+    box-shadow:
         0 8px 32px rgba(0, 0, 0, 0.3),
         inset 0 1px 0 rgba(255, 255, 255, 0.2);
     position: relative;
@@ -310,7 +310,7 @@ nav.scrolled .nav-content {
 .nav-links a:hover {
     color: #ffffff;
     transform: translateY(-3px) scale(1.05);
-    box-shadow: 
+    box-shadow:
         0 12px 30px rgba(255, 40, 0, 0.4),
         0 4px 15px rgba(0, 0, 0, 0.3);
     text-shadow: 0 2px 8px rgba(255, 40, 0, 0.5);
@@ -319,7 +319,7 @@ nav.scrolled .nav-content {
 .nav-links a.active {
     color: #ffffff;
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--hover-color) 50%, #ff6b35 100%);
-    box-shadow: 
+    box-shadow:
         0 8px 25px rgba(255, 40, 0, 0.5),
         inset 0 1px 0 rgba(255, 255, 255, 0.3);
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
@@ -349,7 +349,8 @@ nav.scrolled .nav-content {
     padding: 0 1rem;
 }
 
-.cta-primary, .cta-secondary {
+.cta-primary,
+.cta-secondary {
     padding: 0.8rem 2rem;
     border-radius: 8px;
     text-decoration: none;
@@ -505,7 +506,9 @@ nav.scrolled .nav-content {
         padding: 0 1rem;
     }
 
-    .cta-primary, .cta-secondary, .cta-open-webapp {
+    .cta-primary,
+    .cta-secondary,
+    .cta-open-webapp {
         width: 100%;
         margin: 0.5rem 0;
         min-width: auto;
@@ -602,7 +605,8 @@ nav.scrolled .nav-content {
         padding: 0 1rem;
     }
 
-    .legal-links, .community-link {
+    .legal-links,
+    .community-link {
         justify-content: center;
     }
 
@@ -618,30 +622,38 @@ nav.scrolled .nav-content {
         padding: 1.2rem;
     }
 }
+
 @media screen and (max-width: 900px) {
     .roadmap-container {
         max-width: 100vw;
         padding: 0.7rem;
     }
+
     .timeline {
         padding-top: 1rem;
     }
+
     .timeline-item {
         width: 100%;
         padding: 0.7rem 0.5rem;
     }
+
     .content {
         padding: 1rem 0.7rem;
     }
 }
+
 @media screen and (max-width: 600px) {
-    html, body {
+
+    html,
+    body {
         font-size: 14px;
         margin: 0;
         padding: 0;
         width: 100vw;
         overflow-x: hidden;
     }
+
     nav {
         position: relative;
         top: unset;
@@ -649,17 +661,20 @@ nav.scrolled .nav-content {
         width: 100%;
         z-index: 1000;
         background: var(--background-color, #fff);
-        box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
     }
+
     body {
         padding-top: 0;
     }
+
     .nav-content {
         flex-direction: column;
         align-items: center;
         justify-content: center;
         padding: 0.5rem 0.2rem;
     }
+
     .logo {
         display: flex;
         flex-direction: column;
@@ -668,12 +683,14 @@ nav.scrolled .nav-content {
         width: 100%;
         margin-bottom: 0.5rem;
     }
+
     .logo-img {
         width: 48px;
         height: 48px;
         margin: 0 auto 0.2rem auto;
         display: block;
     }
+
     .logo span {
         font-size: 1.1rem;
         font-weight: bold;
@@ -681,6 +698,7 @@ nav.scrolled .nav-content {
         display: block;
         margin: 0 auto;
     }
+
     .nav-links {
         flex-direction: column;
         width: 100%;
@@ -688,53 +706,71 @@ nav.scrolled .nav-content {
         align-items: flex-start;
         padding-left: 0;
     }
+
     .nav-links li {
         width: 100%;
         text-align: left;
     }
-    .roadmap-container, .releases-container {
+
+    .roadmap-container,
+    .releases-container {
         max-width: 100vw;
         margin: 70px 0 0 0;
         padding: 0.5rem 0.1rem;
         box-sizing: border-box;
     }
-    .roadmap-header h1, .releases-header h1 {
+
+    .roadmap-header h1,
+    .releases-header h1 {
         font-size: 1.1rem;
         text-align: center;
     }
-    .roadmap-header p, .releases-header p {
+
+    .roadmap-header p,
+    .releases-header p {
         font-size: 0.9rem;
         text-align: center;
     }
-    .timeline, .releases-list {
+
+    .timeline,
+    .releases-list {
         padding: 0;
         margin: 0;
     }
-    .timeline-item, .releases-list li {
+
+    .timeline-item,
+    .releases-list li {
         padding: 0.3rem 0.1rem;
         margin: 0.2rem 0;
         width: 100%;
         box-sizing: border-box;
     }
+
     .content {
         padding: 0.5rem 0.2rem;
         font-size: 0.97em;
         margin: 0;
     }
-    .btn-main, .back-link {
+
+    .btn-main,
+    .back-link {
         font-size: 1em;
         padding: 0.5em 1em;
         width: 100%;
         box-sizing: border-box;
         text-align: center;
     }
-    img, svg {
+
+    img,
+    svg {
         max-width: 95vw;
         height: auto;
         display: block;
         margin: 0 auto;
     }
-    section, .section {
+
+    section,
+    .section {
         margin: 0.5em 0;
         padding: 0.2em 0.1em;
     }
@@ -754,6 +790,7 @@ body {
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -840,7 +877,7 @@ html {
     align-items: center;
     justify-content: center;
     padding: 8rem 2rem 4rem;
-    background: 
+    background:
         radial-gradient(circle at 20% 80%, rgba(255, 40, 0, 0.1) 0%, transparent 50%),
         radial-gradient(circle at 80% 20%, rgba(255, 215, 0, 0.08) 0%, transparent 50%),
         var(--background-gradient);
@@ -856,7 +893,7 @@ html {
     left: 0;
     width: 100%;
     height: 100%;
-    background: 
+    background:
         radial-gradient(circle at 25% 25%, rgba(255, 40, 0, 0.05) 0%, transparent 50%),
         radial-gradient(circle at 75% 75%, rgba(255, 215, 0, 0.03) 0%, transparent 50%);
     pointer-events: none;
@@ -864,8 +901,15 @@ html {
 }
 
 @keyframes float {
-    0%, 100% { transform: translateY(0px) rotate(0deg); }
-    50% { transform: translateY(-10px) rotate(1deg); }
+
+    0%,
+    100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-10px) rotate(1deg);
+    }
 }
 
 .hero-content {
@@ -888,8 +932,13 @@ html {
 }
 
 @keyframes glow {
-    from { filter: drop-shadow(0 0 20px rgba(255, 40, 0, 0.3)); }
-    to { filter: drop-shadow(0 0 30px rgba(255, 40, 0, 0.5)); }
+    from {
+        filter: drop-shadow(0 0 20px rgba(255, 40, 0, 0.3));
+    }
+
+    to {
+        filter: drop-shadow(0 0 30px rgba(255, 40, 0, 0.5));
+    }
 }
 
 .tagline {
@@ -914,7 +963,9 @@ html {
     max-width: 800px;
 }
 
-.cta-primary, .cta-secondary, .cta-open-webapp {
+.cta-primary,
+.cta-secondary,
+.cta-open-webapp {
     padding: 1.2rem 2.5rem;
     border-radius: var(--border-radius);
     text-decoration: none;
@@ -947,10 +998,206 @@ html {
     box-shadow: 0 12px 40px rgba(255, 255, 255, 0.3);
 }
 
+/* Section Nouveautés */
+.news-section {
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, rgba(255, 40, 0, 0.05), rgba(255, 40, 0, 0.02));
+    border-top: 2px solid rgba(255, 40, 0, 0.1);
+    border-bottom: 2px solid rgba(255, 40, 0, 0.1);
+}
+
+.news-banner {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.news-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    position: sticky;
+    top: 80px;
+    z-index: 100;
+    background: rgba(18, 18, 18, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 1rem 2rem;
+    border-radius: 15px;
+    border: 2px solid rgba(255, 40, 0, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.news-header i {
+    font-size: 2rem;
+    color: var(--primary-color);
+    animation: pulse 2s infinite;
+}
+
+.news-header h2 {
+    font-size: 2.5rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin: 0;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.news-item {
+    background: var(--card-background);
+    border: 2px solid rgba(255, 40, 0, 0.2);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.news-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+}
+
+.news-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(255, 40, 0, 0.2);
+    border-color: var(--primary-color);
+}
+
+.news-icon {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    filter: drop-shadow(0 0 10px rgba(255, 40, 0, 0.3));
+}
+
+.news-item h3 {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+.news-item ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.news-item li {
+    padding: 0.5rem 0;
+    color: var(--text-color);
+    line-height: 1.5;
+    border-bottom: 1px solid rgba(255, 40, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.news-item li:last-child {
+    border-bottom: none;
+}
+
+.news-item li:hover {
+    color: var(--primary-color);
+    padding-left: 1rem;
+}
+
+.news-cta {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.news-download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--hover-color));
+    color: white;
+    text-decoration: none;
+    padding: 1.2rem 2.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(255, 40, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.news-download-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.news-download-btn:hover::before {
+    left: 100%;
+}
+
+.news-download-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(255, 40, 0, 0.4);
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+@media (max-width: 768px) {
+    .news-section {
+        padding: 2rem 1rem;
+    }
+    
+    .news-header h2 {
+        font-size: 1.8rem;
+    }
+    
+    .news-header {
+        flex-direction: column;
+        gap: 0.5rem;
+        top: 60px;
+        padding: 0.8rem 1rem;
+        margin: 0 1rem 2rem 1rem;
+    }
+    
+    .news-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .news-item {
+        padding: 1.5rem;
+    }
+    
+    .news-download-btn {
+        padding: 1rem 2rem;
+        font-size: 1rem;
+    }
+}
+
 /* Features Section */
 .features {
     padding: 8rem 2rem;
-    background: 
+    background:
         linear-gradient(180deg, var(--background-color) 0%, var(--secondary-color) 100%);
     position: relative;
 }
@@ -1037,7 +1284,7 @@ html {
 /* Download Section */
 .download {
     padding: 8rem 2rem;
-    background: 
+    background:
         radial-gradient(ellipse at center, rgba(255, 40, 0, 0.05) 0%, transparent 70%),
         var(--background-gradient);
     position: relative;
@@ -1113,10 +1360,21 @@ html {
     margin-bottom: 1rem;
 }
 
-.download-card.windows i { color: #00a4ef; }
-.download-card.linux i { color: #f7b93e; }
-.download-card.macos i { color: #a2aaad; }
-.download-card.android i { color: #3DDC84; }
+.download-card.windows i {
+    color: #00a4ef;
+}
+
+.download-card.linux i {
+    color: #f7b93e;
+}
+
+.download-card.macos i {
+    color: #a2aaad;
+}
+
+.download-card.android i {
+    color: #3DDC84;
+}
 
 .download-card.android .download-buttons {
     display: flex;
@@ -1200,7 +1458,7 @@ html {
 /* About Section */
 .about {
     padding: 8rem 2rem;
-    background: 
+    background:
         linear-gradient(180deg, var(--secondary-color) 0%, var(--background-color) 100%);
     position: relative;
 }
@@ -1283,13 +1541,22 @@ html {
 }
 
 @keyframes pulse {
-    0%, 100% { opacity: 1; transform: scale(1); }
-    50% { opacity: 0.7; transform: scale(1.1); }
+
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.7;
+        transform: scale(1.1);
+    }
 }
 
 /* Footer */
 footer {
-    background: 
+    background:
         linear-gradient(180deg, var(--background-color) 0%, var(--secondary-color) 100%);
     padding: 6rem 2rem 3rem;
     position: relative;
@@ -1420,11 +1687,20 @@ footer::before {
 
 /* Animations */
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-.feature-card, .download-card, .about-content {
+.feature-card,
+.download-card,
+.about-content {
     animation: fadeIn 1s ease-out forwards;
 }
 
@@ -1438,18 +1714,21 @@ html {
         flex-wrap: wrap;
         gap: 1.5rem;
     }
+
     .download-card {
         min-width: 260px;
         max-width: 100%;
         flex: 1 1 320px;
     }
 }
+
 @media screen and (max-width: 800px) {
     .download-options {
         flex-direction: column;
         align-items: stretch;
         gap: 1.2rem;
     }
+
     .download-card {
         width: 100%;
         min-width: 0;
@@ -1457,6 +1736,7 @@ html {
         box-sizing: border-box;
     }
 }
+
 @media screen and (max-width: 600px) {
     .download-options {
         flex-direction: column;
@@ -1464,6 +1744,7 @@ html {
         gap: 1rem;
         padding: 0 0.2em;
     }
+
     .download-card {
         width: 100%;
         min-width: 0;
@@ -1471,14 +1752,58 @@ html {
         box-sizing: border-box;
         padding: 1em 0.3em;
     }
+
     .download-card h3 {
         font-size: 1.1em;
     }
+
     .download-card p {
         font-size: 0.98em;
     }
+
     .download-buttons {
         flex-direction: column;
         gap: 0.5em;
     }
+}
+
+/* Style pour le lien d'annonce vidéo */
+.video-announcement {
+    background: linear-gradient(135deg, #ff2800 0%, #cc1f00 100%) !important;
+    color: white !important;
+    border-radius: 20px !important;
+    padding: 8px 15px !important;
+    font-weight: 600 !important;
+    position: relative !important;
+    overflow: hidden !important;
+    animation: glow 2s ease-in-out infinite alternate !important;
+}
+
+.video-announcement::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.3), transparent);
+    transition: left 0.5s;
+}
+
+.video-announcement:hover::before {
+    left: 100%;
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 5px rgba(255, 40, 0, 0.5);
+    }
+
+    to {
+        box-shadow: 0 0 20px rgba(255, 40, 0, 0.8), 0 0 30px rgba(255, 215, 0, 0.6);
+    }
+}
+
+.video-announcement i {
+    margin-right: 5px;
 }
