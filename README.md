@@ -30,8 +30,7 @@ Site web officiel de Liberchat - Application de messagerie libre et sécurisée.
 - **HTML5** - Structure sémantique
 - **CSS3** - Styles modernes avec variables CSS
 - **JavaScript** - Interactions et animations
-- **Font Awesome** - Icônes
-- **Google Fonts** - Typographie (Inter)
+- **Font Awesome** - Icône
 
 ## 📁 Structure du projet
 
