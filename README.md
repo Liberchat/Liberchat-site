@@ -15,7 +15,7 @@ Site web officiel de Liberchat - Application de messagerie libre et sécurisée.
 
 Ce repository contient le code source du site web officiel de Liberchat, une application de messagerie décentralisée avec chiffrement de bout en bout.
 
-**URL du site :** [liberchat.netlify.app](liberchat.netlify.app)
+
 
 ## 📋 Fonctionnalités du site
 
