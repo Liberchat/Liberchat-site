@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirection - Liberchat</title>
+    <link rel="icon" type="image/png" href="assets/icon.png">
+    
+    <!-- Redirection automatique après 3 secondes -->
+    <meta http-equiv="refresh" content="3;url=https://liberchat.unionlibertaireanarchiste.org/">
+    
+    <!-- Redirection JavaScript immédiate -->
+    <script>
+        // Redirection immédiate
+        setTimeout(function() {
+            window.location.href = "https://liberchat.unionlibertaireanarchiste.org/";
+        }, 100);
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .redirect-container {
+            text-align: center;
+            padding: 3rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            max-width: 600px;
+            width: 90%;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .logo {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 2rem;
+            background: linear-gradient(135deg, #ff2800, #ff4500);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        .logo img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #ff2800, #ff4500);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: #cccccc;
+            line-height: 1.6;
+        }
+
+        .new-url {
+            background: rgba(255, 40, 0, 0.1);
+            border: 2px solid #ff2800;
+            border-radius: 10px;
+            padding: 1rem;
+            margin: 2rem 0;
+            font-family: 'Courier New', monospace;
+            font-size: 1.1rem;
+            color: #ff4500;
+            word-break: break-all;
+        }
+
+        .countdown {
+            font-size: 1.5rem;
+            margin: 2rem 0;
+            color: #ff4500;
+            font-weight: bold;
+        }
+
+        .loading-bar {
+            width: 100%;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 2px;
+            overflow: hidden;
+            margin: 2rem 0;
+        }
+
+        .loading-progress {
+            height: 100%;
+            background: linear-gradient(90deg, #ff2800, #ff4500);
+            border-radius: 2px;
+            animation: loading 3s linear forwards;
+        }
+
+        @keyframes loading {
+            from {
+                width: 0%;
+            }
+            to {
+                width: 100%;
+            }
+        }
+
+        .manual-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: linear-gradient(135deg, #ff2800, #ff4500);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 40, 0, 0.3);
+        }
+
+        .manual-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255, 40, 0, 0.4);
+        }
+
+        .info-text {
+            font-size: 0.9rem;
+            color: #999999;
+            margin-top: 2rem;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 768px) {
+            .redirect-container {
+                padding: 2rem;
+                margin: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .subtitle {
+                font-size: 1rem;
+            }
+
+            .new-url {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="redirect-container">
+        <div class="logo">
+            <img src="assets/icon.png" alt="Liberchat Logo" onerror="this.style.display='none'; this.parentNode.innerHTML='🚀';">
+        </div>
+        
+        <h1>Liberchat a déménagé !</h1>
+        
+        <p class="subtitle">
+            Notre site est maintenant hébergé sur notre nouveau domaine.<br>
+            Vous allez être redirigé automatiquement...
+        </p>
+        
+        <div class="new-url">
+            https://liberchat.unionlibertaireanarchiste.org/
+        </div>
+        
+        <div class="countdown" id="countdown">
+            Redirection dans <span id="timer">3</span> secondes...
+        </div>
+        
+        <div class="loading-bar">
+            <div class="loading-progress"></div>
+        </div>
+        
+        <a href="https://liberchat.unionlibertaireanarchiste.org/" class="manual-link">
+            <span>🚀</span>
+            Accéder au nouveau site maintenant
+        </a>
+        
+        <p class="info-text">
+            Si la redirection ne fonctionne pas, cliquez sur le lien ci-dessus.<br>
+            Pensez à mettre à jour vos favoris avec la nouvelle adresse !
+        </p>
+    </div>
+
+    <script>
+        // Compte à rebours
+        let timeLeft = 3;
+        const timerElement = document.getElementById('timer');
+        const countdownElement = document.getElementById('countdown');
+        
+        const countdown = setInterval(() => {
+            timeLeft--;
+            timerElement.textContent = timeLeft;
+            
+            if (timeLeft <= 0) {
+                clearInterval(countdown);
+                countdownElement.innerHTML = 'Redirection en cours...';
+                window.location.href = "https://liberchat.unionlibertaireanarchiste.org/";
+            }
+        }, 1000);
+        
+        // Redirection de sécurité après 5 secondes
+        setTimeout(() => {
+            window.location.href = "https://liberchat.unionlibertaireanarchiste.org/";
+        }, 5000);
+    </script>
+</body>
+</html>
