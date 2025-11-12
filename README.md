@@ -11,9 +11,6 @@
 
 Site web officiel de Liberchat - Application de messagerie libre et sécurisée.
 
-## 🌐 Aperçu
-
-Ce repository contient le code source du site web officiel de Liberchat, une application de messagerie décentralisée avec chiffrement de bout en bout.
 
 
 
