@@ -1,228 +1,15 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
-    <title>Releases Linux Liberchat</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Releases macOS - Liberchat</title>
+    <link rel="icon" type="image/png" href="assets/icon.png">
     <link rel="stylesheet" href="styles.css">
-    <style>
-        .releases-main-container {
-            max-width: 1000px;
-            margin: 140px auto 0 auto;
-            background: var(--card-background);
-            border: 1px solid var(--card-border);
-            border-radius: var(--border-radius);
-            box-shadow: var(--shadow-primary);
-            padding: 4rem 3rem;
-            display: flex;
-            flex-direction: column;
-            align-items: stretch;
-            box-sizing: border-box;
-            backdrop-filter: blur(20px);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .releases-main-container::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background: linear-gradient(90deg, transparent, var(--primary-color), var(--accent-color), transparent);
-        }
-        .releases-header {
-            text-align: center;
-            margin-bottom: 2.5rem;
-        }
-        .releases-header h1 {
-            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-size: 3.2rem;
-            margin-bottom: 1rem;
-            letter-spacing: -1px;
-            font-weight: 700;
-            text-shadow: 0 0 30px rgba(255, 40, 0, 0.3);
-        }
-        .releases-header p {
-            font-size: 1.4rem;
-            color: var(--text-muted);
-            margin-bottom: 1rem;
-            font-weight: 300;
-            letter-spacing: 0.5px;
-        }
-        .releases-list {
-            list-style: none;
-            padding: 0;
-        }
-        .releases-list li {
-            background: var(--card-background);
-            border: 1px solid var(--card-border);
-            border-radius: var(--border-radius);
-            box-shadow: var(--shadow-card);
-            margin-bottom: 2rem;
-            padding: 2rem 1.8rem;
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            font-size: 1.3rem;
-            transition: var(--transition);
-            position: relative;
-            overflow: hidden;
-            backdrop-filter: blur(10px);
-        }
-        
-        .releases-list li::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
-            opacity: 0;
-            transition: var(--transition);
-        }
-        
-        .releases-list li:hover {
-            transform: translateY(-5px) scale(1.02);
-            box-shadow: var(--shadow-primary);
-            border-color: var(--primary-color);
-        }
-        
-        .releases-list li:hover::before {
-            opacity: 1;
-        }
-        .releases-list a {
-            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: 600;
-            text-decoration: none;
-            font-size: 1.2rem;
-            transition: var(--transition);
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.8rem 1.5rem;
-            border: 2px solid var(--primary-color);
-            border-radius: var(--border-radius-small);
-            background-color: rgba(255, 40, 0, 0.05);
-            margin-top: 0.5rem;
-        }
-        
-        .releases-list a::after {
-            content: '↓';
-            font-size: 1.1rem;
-            transition: var(--transition);
-        }
-        .releases-list a:hover {
-            transform: translateY(-2px) scale(1.02);
-            box-shadow: 0 8px 25px rgba(255, 40, 0, 0.3);
-            background-color: rgba(255, 40, 0, 0.1);
-            border-color: var(--primary-light);
-        }
-        
-        .releases-list a:hover::after {
-            transform: translateY(2px);
-        }
-        .back-link {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-            margin: 3rem auto 0 auto;
-            padding: 1rem 2rem;
-            background: rgba(255, 40, 0, 0.05);
-            border: 2px solid var(--primary-color);
-            border-radius: var(--border-radius);
-            color: var(--primary-color);
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: var(--transition);
-            backdrop-filter: blur(10px);
-        }
-        
-        .back-link::before {
-            content: '←';
-            font-size: 1.2rem;
-            transition: var(--transition);
-        }
-        
-        .back-link:hover {
-            transform: translateY(-3px) scale(1.02);
-            box-shadow: var(--shadow-primary);
-            background: rgba(255, 40, 0, 0.1);
-            border-color: var(--primary-light);
-        }
-        
-        .back-link:hover::before {
-            transform: translateX(-3px);
-        }
-        .doc-link {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.75rem;
-            margin: 0 auto 3rem auto;
-            padding: 1rem 2rem;
-            background: #ffffff;
-            color: #000000;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.1rem;
-            border-radius: var(--border-radius);
-            transition: var(--transition);
-            box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
-        }
-        
-        .doc-link::after {
-            content: '↗';
-            font-size: 1.2rem;
-            transition: var(--transition);
-        }
-        
-        .doc-link:hover {
-            background: rgba(255, 255, 255, 0.9);
-            transform: translateY(-3px) scale(1.02);
-            box-shadow: 0 12px 35px rgba(255, 255, 255, 0.3);
-        }
-        
-        .doc-link:hover::after {
-            transform: translate(2px, -2px);
-        }
-        @media screen and (max-width: 900px) {
-            .releases-main-container {
-                max-width: 99vw;
-                padding: 1.7em 0.7em 1.7em 0.7em;
-            }
-            .releases-header h1 {
-                font-size: 1.7em;
-            }
-            .releases-list li {
-                font-size: 1.08em;
-            }
-        }
-        @media screen and (max-width: 600px) {
-            .releases-main-container {
-                max-width: 100vw;
-                margin: 80px 0 0 0;
-                padding: 0.7em 0.1em 1em 0.1em;
-            }
-            .releases-header h1 {
-                font-size: 1.25em;
-            }
-            .releases-list li {
-                padding: 1em 0.1em;
-                font-size: 1.05em;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
     <nav>
         <div class="nav-content">
@@ -235,30 +22,379 @@
             </button>
             <ul class="nav-links">
                 <li><a href="./">Accueil</a></li>
+                <li><a href="./roadmap.html">Feuille de route</a></li>
+                <li><a href="releases.html">Android</a></li>
+                <li><a href="releases-linux.html">Linux</a></li>
+                <li><a href="releases-windows.html">Windows</a></li>
+                <li><a href="releases-macos.html" class="active">MacOS</a></li>
+                <li><a href="installation-apk.html">Installation mobile</a></li>
+                <li><a href="autohebergement.html">Auto-hébergement</a></li>
+                <li><a href="docker.html">Docker</a></li>
             </ul>
         </div>
     </nav>
 
-    <div class="releases-main-container">
-        <div class="releases-header">
-            <h1>Versions macOS de Liberchat</h1>
-            <p>Téléchargez les différentes versions desktop pour macOS</p>
+    <main style="padding-top: 80px;">
+        <section class="download">
+            <h2><i class="fab fa-apple"></i> Versions macOS de Liberchat</h2>
+            <div class="releases-container">
+                <div class="macos-card">
+                    <div class="card-header">
+                        <i class="fab fa-apple"></i>
+                        <h3>Liberchat pour macOS</h3>
+                    </div>
+                    <div class="card-content">
+                        <p>Téléchargez les différentes versions de Liberchat pour macOS. Compatible avec macOS 10.14 et
+                            versions ultérieures.</p>
+
+                        <a href="https://github.com/Liberchat/Liberchat-macOS" class="doc-link" target="_blank">
+                            <i class="fab fa-github"></i>
+                            Voir le projet sur GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <h2>Versions disponibles</h2>
+            <div class="releases-list">
+                <div class="release-card">
+                    <div class="release-header">
+                        <h3>v2.0.0 (DMG)</h3>
+                        <span class="version-badge latest">Recommandée</span>
+                    </div>
+                    <div class="release-content">
+                        <p>Dernière version stable pour macOS avec toutes les fonctionnalités modernes et optimisations
+                            de performance.</p>
+                        <div class="release-actions">
+                            <a href="https://github.com/Liberchat/Liberchat-macOS/releases/download/v2.0.0/Liberchat-macos-v2.0.0.dmg"
+                                class="download-btn primary">
+                                <i class="fas fa-download"></i>
+                                Télécharger DMG
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="release-card">
+                    <div class="release-header">
+                        <h3>v1.0.0 (DMG)</h3>
+                        <span class="version-badge">Archive</span>
+                    </div>
+                    <div class="release-content">
+                        <p>Version initiale pour macOS, toujours fonctionnelle pour les systèmes plus anciens.</p>
+                        <div class="release-actions">
+                            <a href="https://github.com/Liberchat/Liberchat-macOS/releases/download/1.0/liberchat-macos.dmg"
+                                class="download-btn primary">
+                                <i class="fas fa-download"></i>
+                                Télécharger DMG
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about">
+            <div class="about-content">
+                <h2><i class="fas fa-info-circle"></i> Informations importantes</h2>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Sécurité</h3>
+                        <p>Application signée et notariée par Apple. Installation sécurisée depuis nos sources
+                            officielles.</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fab fa-apple"></i>
+                        <h3>Compatibilité</h3>
+                        <p>Nécessite macOS 10.14 (Mojave) ou supérieur. Compatible avec les puces Intel et Apple
+                            Silicon.</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-hdd"></i>
+                        <h3>Installation</h3>
+                        <p>Fichier DMG simple à installer. Glissez l'application dans le dossier Applications pour
+                            l'installer.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Liberchat</h4>
+                <p>Communication libre et sécurisée pour tous.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Liens</h4>
+                <ul>
+                    <li><a href="https://github.com/AnARCHIS12/Liberchat-3.0">GitHub</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="privacy.html">Mentions légales</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="https://www.facebook.com/groups/1056100956078058">Groupe Facebook</a></li>
+                    <li><a href="installation-apk.html">Guide d'installation</a></li>
+                </ul>
+            </div>
         </div>
-        <a href="https://github.com/Liberchat/Liberchat-macOS" class="doc-link" target="_blank">Voir la documentation et le projet sur GitHub</a>
-        <ul class="releases-list">
+        <div class="footer-bottom">
+            <p>&copy; <span class="current-year"></span> Liberchat - Logiciel Libre</p>
+        </div>
+    </footer>
 
-            <li>
-                <span><strong>v2.0.0 (DMG)</strong></span>
-                <a href="https://github.com/Liberchat/Liberchat-macOS/releases/download/v2.0.0/Liberchat-macos-v2.0.0.dmg" target="_blank">Télécharger .dmg</a>
-            </li>
+    <style>
+        .releases-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
 
-            <li>
-                <span><strong>V1.0.0 (DMG)</strong></span>
-                <a href="https://github.com/Liberchat/Liberchat-macOS/releases/download/1.0/liberchat-macos.dmg" target="_blank">Télécharger .dmg</a>
-            </li>
-            
-       
-        <a href="index.html" class="back-link">Retour à l'accueil</a>
-    </div>
+        .macos-card {
+            background: var(--card-background);
+            border: 1px solid var(--card-border);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-card);
+            transition: var(--transition);
+            margin-bottom: 3rem;
+        }
+
+        .macos-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-primary);
+        }
+
+        .card-header {
+            background: linear-gradient(135deg, #8E8E93, #636366);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .card-header i {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .card-header h3 {
+            font-size: 1.5rem;
+            margin: 0;
+        }
+
+        .card-content {
+            padding: 2.5rem;
+            text-align: center;
+        }
+
+        .card-content p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            color: var(--text-muted);
+        }
+
+        .doc-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1rem 2rem;
+            background: #ffffff;
+            color: #000000;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            border-radius: var(--border-radius);
+            transition: var(--transition);
+            box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
+        }
+
+        .doc-link:hover {
+            background: rgba(255, 255, 255, 0.9);
+            transform: translateY(-2px);
+            box-shadow: 0 12px 35px rgba(255, 255, 255, 0.3);
+        }
+
+        .releases-list {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            gap: 2rem;
+        }
+
+        .release-card {
+            background: var(--card-background);
+            border: 1px solid var(--card-border);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .release-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-card);
+        }
+
+        .release-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 2rem;
+            border-bottom: 1px solid var(--card-border);
+        }
+
+        .release-header h3 {
+            color: var(--primary-color);
+            margin: 0;
+            font-size: 1.3rem;
+        }
+
+        .version-badge {
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .version-badge.latest {
+            background: linear-gradient(135deg, var(--primary-color), var(--hover-color));
+            color: white;
+        }
+
+        .version-badge {
+            background: rgba(108, 117, 125, 0.2);
+            color: var(--text-muted);
+        }
+
+        .release-content {
+            padding: 2rem;
+        }
+
+        .release-content p {
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .release-actions {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.8rem 1.5rem;
+            border-radius: var(--border-radius-small);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            font-size: 0.95rem;
+        }
+
+        .download-btn.primary {
+            background: linear-gradient(135deg, var(--primary-color), var(--hover-color));
+            color: white;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(255, 40, 0, 0.3);
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .info-card {
+            background: var(--card-background);
+            border: 1px solid var(--card-border);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .info-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-card);
+        }
+
+        .info-card i {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .info-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .info-card p {
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .releases-container {
+                padding: 0 1rem;
+            }
+
+            .card-content {
+                padding: 1.5rem;
+            }
+
+            .release-header {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+
+            .release-actions {
+                flex-direction: column;
+            }
+
+            .download-btn {
+                justify-content: center;
+            }
+        }
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Mise à jour de l'année
+            const yearElements = document.querySelectorAll('.current-year');
+            const currentYear = new Date().getFullYear();
+            yearElements.forEach(el => {
+                el.textContent = currentYear;
+            });
+
+            // Menu mobile
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
+
+            if (menuToggle && navLinks) {
+                menuToggle.addEventListener('click', () => {
+                    navLinks.classList.toggle('active');
+                    menuToggle.classList.toggle('active');
+                });
+            }
+        });
+    </script>
 </body>
+
 </html>
