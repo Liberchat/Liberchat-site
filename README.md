@@ -61,7 +61,7 @@ liberchat/
 └── LICENSE                # Licence du projet
 ```
 
-## 🚀 Installation locale
+##  Installation locale
 
 1. **Cloner le repository**
    ```bash
