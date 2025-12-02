@@ -5,7 +5,7 @@
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 [![Responsive](https://img.shields.io/badge/Responsive-Yes-brightgreen)](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design)
-[![Open Source](https://img.shields.io/badge/Open%20Source-❤️-red)](https://opensource
+[![Open Source](https://img.shields.io/badge/Open%20Source-❤️-red)](https://opensource.org/)
 [![GitHub Stars](https://img.shields.io/github/stars/AnARCHIS12/liberchat-site?style=social)](https://github.com/AnARCHIS12/liberchat-site)
 
 Site web officiel de Liberchat - Application de messagerie libre et sécurisée.
