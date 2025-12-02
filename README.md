@@ -137,7 +137,6 @@ Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus de 
 - **Application Liberchat** - [GitHub](https://github.com/AnARCHIS12/Liberchat-3.0)
 - **Auto-hébergement YunoHost** - [GitHub](https://github.com/Liberchat/liberchatserver_ynh)
 - **Docker** - [GitHub](https://github.com/Liberchat/Liberchat-docker)
-- **Discord** - [Rejoindre la communauté](https://discord.gg/nQDz6g8nYZ)
 - **Facebook** - [Groupe Facebook](https://www.facebook.com/groups/1056100956078058)
 - **Téléchargements** - [Releases](https://github.com/Liberchat)
 
